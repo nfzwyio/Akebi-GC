@@ -26,6 +26,11 @@ jobs:
     # Optional, because current solution is executing custom command line after finishing build
     # Repo does not affected
     # Using hardcoded path and string
+    - name: Install .NET Core 3.1
+      uses: actions/setup-dotnet@v3
+      with:
+        dotnet-version: 3.1.x
+        
     - name: Remove Custom Build Steps
       shell: bash
       run: |
